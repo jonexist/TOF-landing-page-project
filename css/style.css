@@ -9,12 +9,16 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  background-color: var(--main-bg);
+}
 :root {
   --main-bg: #2C3333;
   --font: #fff;
-  --btn: #76b900;
-  --carousel-bg: #4b5050;
-  --hover: #6ba30a;
+  --title: #3C413F;
+  --btn: #1DA756;
+  --carousel-bg: #232826;
+  --hover: #198647;
 }
 .navbar {
   display: flex;
@@ -48,9 +52,6 @@ html {
 .nav-list li a:hover {
   color: var(--btn);
   transition: color 0.3s ease-in-out;
-}
-.content {
-  background-color: var(--main-bg);
 }
 /** Home Page **/
 .front-page {
@@ -100,7 +101,7 @@ html {
 }
 .btn > button:hover {
   color: black;
-  background-color: #98d62e;
+  background-color: var(--hover);
   transition: all 0.4s ease-in-out;
 }
 .btn > a {
@@ -118,7 +119,7 @@ html {
 /** About Page **/
 .about-page {
   width: 100%;
-  height: calc(70vh - 1px);
+  height: calc(80vh - 1px);
 }
 .info {
   display: flex;
@@ -148,27 +149,32 @@ html {
 .offer {
   display: flex;
   padding: 0 5%;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .offer h3 {
   margin-bottom: 0.8rem;
 }
-.first-offer, .second-offer, .third-offer {
-  flex: 1;
-}
 .first-offer h3, .second-offer h3, .third-offer h3 {
   letter-spacing: 0.1em;
 }
-.first-offer {
+.first-offer,
+.second-offer,
+.third-offer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
   padding: 0 20px;
   max-width: 350px;
+  min-height: 180px;
   background-color: var(--carousel-bg);
   border-radius: 0.625rem;
+  cursor: pointer;
+  background: #3C413F;
+  box-shadow:  5px 5px 10px #3b403e,
+  -5px -5px 10px #3d4240;
 }
 /** Hover effects **/
 .first-offer:hover {
@@ -184,28 +190,59 @@ html {
   transition: all 0.2s ease-in-out;
 }
 /* end */
-.second-offer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: justify;
-  padding: 0 20px;
-  max-width: 400px;
-  background-color: var(--carousel-bg);
-  height: 120px;
-  border-radius: 0.625rem;
-}
-.third-offer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: justify;
-  padding: 0 20px;
-  max-width: 400px;
-  background-color: var(--carousel-bg);
-  height: 120px;
-  border-radius: 0.625rem;
-}
 /** About Page end **/
+
+/** Product Page **/
+.product-page {
+  width: 100%;
+  height: calc(80vh - 1px);
+}
+.product-intro {
+  text-align: center;
+  color: var(--font);
+}
+.product-intro > h1 {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  line-height: 3;
+}
+.product-intro > h1 span {
+  color: var(--btn);
+}
+.product-intro > p {
+  font-size: 1.3rem;
+  line-height: 4;
+}
+.product-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.series {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  max-width: 500px;
+  cursor: pointer;
+}
+.series > h2 span {
+  line-height: 2;
+  color: var(--btn);
+}
+.gpu > img {
+  max-width: 400px;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+.gpu {
+  background-color: var(--title);
+  width: 400px;
+  border-radius: 0.620rem 0.620rem 0.625rem 0.625rem;
+}
+.gpu > p {
+  padding: 3%;
+  text-align: justify;
+}
+/** Product Page end **/
